@@ -1,0 +1,11 @@
+DROP DATABASE IF EXISTS biblioteca_pessoal_1s2026;
+CREATE DATABASE biblioteca_pessoal_1s2026;
+USE biblioteca_pessoal_1s2026;
+
+CREATE TABLE categoria(
+	id_categoria INT AUTO_INCREMENT NOT NULL,
+    nome VARCHAR(128) NOT NULL UNIQUE,
+    descricao TEXT,
+    data_cadastro TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    data_atualizacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP NOT NULL
+)
